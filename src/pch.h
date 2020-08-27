@@ -10,6 +10,13 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 
+#pragma warning( disable : 4278 )
+#pragma warning( disable : 4146 )
+	// import the MSADDNDR.DLL typelib which we need for IDTExtensibility2
+	#import "libid:AC0714F2-3D04-11D1-AE7D-00A0C90F26F4" raw_interfaces_only named_guids
+#pragma warning( default : 4146 )
+#pragma warning( default : 4278 )
+
 #include "resource.h"
 #include "NativeAddinTypeLib_h.h"
 
