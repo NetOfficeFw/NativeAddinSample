@@ -1,0 +1,24 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(0EE4CA58-103E-40CF-A69F-EF1F79B1B097),
+	version(1.0),
+	helpstring("NativeAddin 1.0 Type Library")
+]
+library NativeAddinTypeLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		uuid(D287ADFB-DC79-4DFE-9420-ED1265115585),
+		helpstring("NativeAddin Class")
+	]
+	coclass NativeAddin
+	{
+		[default] interface IUnknown;
+	};
+
+};
+
+

@@ -1,0 +1,48 @@
+HKCR
+{
+    NativeAddinLib = s 'Connect Class'
+    {
+        CLSID = s '{d287adfb-dc79-4dfe-9420-ed1265115585}'
+    }
+    NoRemove CLSID
+    {
+        ForceRemove '{d287adfb-dc79-4dfe-9420-ed1265115585}' = s 'NativeAddinLib'
+        {
+            ProgID = s 'NativeAddinLib'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+            
+        }
+    }
+}
+
+HKCU
+{
+    NoRemove Software
+    {
+        NoRemove Microsoft
+        {
+            NoRemove Office
+            {
+                NoRemove PowerPoint
+                {
+                    NoRemove Addins
+                    {
+                        ForceRemove NativeAddinLib
+                        {
+                            val 'Description' = s 'Sample library to test Office Add-in extensibility.'
+                            val 'FriendlyName' = s 'NativeAddin Sample'
+                            val 'LoadBehavior' = d 3
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
