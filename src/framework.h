@@ -8,3 +8,5 @@
 
 // Windows Header Files
 #include <windows.h>
+
+#include <shellscalingapi.h>
