@@ -20,4 +20,6 @@
 #include "resource.h"
 #include "NativeAddinTypeLib_h.h"
 
+#include "gtest/gtest.h"
+
 #endif //PCH_H
