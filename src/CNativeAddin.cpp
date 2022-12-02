@@ -68,7 +68,7 @@ protected:
         this->Application->Release();
     }
 
-    IDispatch* Application;
+    IDispatch* Application = nullptr;
 };
 
 TEST_F(PowerPointFixture, ApplicationIsValidObject) {
