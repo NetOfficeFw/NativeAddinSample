@@ -29,6 +29,7 @@ public:
 
     STDMETHOD(OnDisconnection)(ext_DisconnectMode RemoveMode, SAFEARRAY** custom);
 
+    static IDispatch* Application;
 };
 
 
